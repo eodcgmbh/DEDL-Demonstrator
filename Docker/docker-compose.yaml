@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  dedl:
+    build:
+      context: .
+      dockerfile: Dockerfile.DevContainer
+    command: sleep infinity
+    volumes:
+      - ../:/workspaces/dedl_demo:cached

@@ -1,0 +1,16 @@
+{
+    "name": "DEDL_demo",
+    "dockerComposeFile": "../Docker/docker-compose.yaml",
+    "service": "dedl",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}

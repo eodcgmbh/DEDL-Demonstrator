@@ -1,0 +1,23 @@
+FROM ghcr.io/mamba-org/micromamba-devcontainer:latest
+
+RUN micromamba install --yes --name base --channel conda-forge \
+    gdal \
+    s3fs \
+    fsspec \
+    ipykernel \
+    cfgrib \
+    xarray \
+    dask \
+    dask-gateway=2023.1.1 \
+    rioxarray \
+    numba \
+    pyresample \
+    dask \
+    zarr \
+    cartopy \
+    datashader \
+    holoviews \
+    bokeh && \
+    micromamba clean --all --yes
+ARG MAMBA_DOCKERFILE_ACTIVATE=1
+RUN pip install pytileproj geospade pre-commit nbconvert

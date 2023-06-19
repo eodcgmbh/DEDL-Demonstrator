@@ -1,0 +1,1 @@
+from dedl.services.copernicus.predicted_rainfall import PredictedRainfall
